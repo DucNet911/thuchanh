@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://soap.server.network.judge.dblab.ptit/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://soap.server.network.judge.dblab.ptit/" name="AllServices"><types><xsd:schema targetNamespace="http://soap.server.network.judge.dblab.ptit/"><xsd:include schemaLocation="DataService.xsd"/><xsd:include schemaLocation="CharacterService.xsd"/><xsd:include schemaLocation="ObjectService.xsd"/></xsd:schema></types><message name="submitDataStringArray">
+<part name="parameters" element="tns:submitDataStringArray"/>
+</message>
+<message name="submitDataStringArrayResponse">
+<part name="parameters" element="tns:submitDataStringArrayResponse"/>
+</message>
+<message name="getDataDouble">
+<part name="parameters" element="tns:getDataDouble"/>
+</message>
+<message name="getDataDoubleResponse">
+<part name="parameters" element="tns:getDataDoubleResponse"/>
+</message>
+<message name="submitDataInt">
+<part name="parameters" element="tns:submitDataInt"/>
+</message>
+<message name="submitDataIntResponse">
+<part name="parameters" element="tns:submitDataIntResponse"/>
+</message>
+<message name="submitDataIntArray">
+<part name="parameters" element="tns:submitDataIntArray"/>
+</message>
+<message name="submitDataIntArrayResponse">
+<part name="parameters" element="tns:submitDataIntArrayResponse"/>
+</message>
+<message name="submitDataString">
+<part name="parameters" element="tns:submitDataString"/>
+</message>
+<message name="submitDataStringResponse">
+<part name="parameters" element="tns:submitDataStringResponse"/>
+</message>
+<message name="getData">
+<part name="parameters" element="tns:getData"/>
+</message>
+<message name="getDataResponse">
+<part name="parameters" element="tns:getDataResponse"/>
+</message>
+<portType name="SoapDataService">
+<operation name="submitDataStringArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringArrayRequest" message="tns:submitDataStringArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringArrayResponse" message="tns:submitDataStringArrayResponse"/>
+</operation>
+<operation name="getDataDouble">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataDoubleRequest" message="tns:getDataDouble"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataDoubleResponse" message="tns:getDataDoubleResponse"/>
+</operation>
+<operation name="submitDataInt">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntRequest" message="tns:submitDataInt"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntResponse" message="tns:submitDataIntResponse"/>
+</operation>
+<operation name="submitDataIntArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntArrayRequest" message="tns:submitDataIntArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntArrayResponse" message="tns:submitDataIntArrayResponse"/>
+</operation>
+<operation name="submitDataString">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringRequest" message="tns:submitDataString"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringResponse" message="tns:submitDataStringResponse"/>
+</operation>
+<operation name="getData">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataRequest" message="tns:getData"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataResponse" message="tns:getDataResponse"/>
+</operation>
+</portType>
+<binding name="SoapDataServicePortBinding" type="tns:SoapDataService">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="submitDataStringArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getDataDouble">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitDataInt">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitDataIntArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitDataString">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getData">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="DataService">
+<port name="SoapDataServicePort" binding="tns:SoapDataServicePortBinding">
+<soap:address location="http://36.50.135.242:2221/DataService"/>
+</port>
+</service>
+<message name="submitCharacterCharArray">
+<part name="parameters" element="tns:submitCharacterCharArray"/>
+</message>
+<message name="submitCharacterCharArrayResponse">
+<part name="parameters" element="tns:submitCharacterCharArrayResponse"/>
+</message>
+<message name="submitCharacterString">
+<part name="parameters" element="tns:submitCharacterString"/>
+</message>
+<message name="submitCharacterStringResponse">
+<part name="parameters" element="tns:submitCharacterStringResponse"/>
+</message>
+<message name="submitCharacterStringArray">
+<part name="parameters" element="tns:submitCharacterStringArray"/>
+</message>
+<message name="submitCharacterStringArrayResponse">
+<part name="parameters" element="tns:submitCharacterStringArrayResponse"/>
+</message>
+<message name="submitString">
+<part name="parameters" element="tns:submitString"/>
+</message>
+<message name="submitStringResponse">
+<part name="parameters" element="tns:submitStringResponse"/>
+</message>
+<message name="submitStringArray">
+<part name="parameters" element="tns:submitStringArray"/>
+</message>
+<message name="submitStringArrayResponse">
+<part name="parameters" element="tns:submitStringArrayResponse"/>
+</message>
+<message name="requestString">
+<part name="parameters" element="tns:requestString"/>
+</message>
+<message name="requestStringResponse">
+<part name="parameters" element="tns:requestStringResponse"/>
+</message>
+<message name="requestStringArray">
+<part name="parameters" element="tns:requestStringArray"/>
+</message>
+<message name="requestStringArrayResponse">
+<part name="parameters" element="tns:requestStringArrayResponse"/>
+</message>
+<message name="requestCharacter">
+<part name="parameters" element="tns:requestCharacter"/>
+</message>
+<message name="requestCharacterResponse">
+<part name="parameters" element="tns:requestCharacterResponse"/>
+</message>
+<portType name="SoapCharacterService">
+<operation name="submitCharacterCharArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterCharArrayRequest" message="tns:submitCharacterCharArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterCharArrayResponse" message="tns:submitCharacterCharArrayResponse"/>
+</operation>
+<operation name="submitCharacterString">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterStringRequest" message="tns:submitCharacterString"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterStringResponse" message="tns:submitCharacterStringResponse"/>
+</operation>
+<operation name="submitCharacterStringArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterStringArrayRequest" message="tns:submitCharacterStringArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitCharacterStringArrayResponse" message="tns:submitCharacterStringArrayResponse"/>
+</operation>
+<operation name="submitString">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitStringRequest" message="tns:submitString"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitStringResponse" message="tns:submitStringResponse"/>
+</operation>
+<operation name="submitStringArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitStringArrayRequest" message="tns:submitStringArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/submitStringArrayResponse" message="tns:submitStringArrayResponse"/>
+</operation>
+<operation name="requestString">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestStringRequest" message="tns:requestString"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestStringResponse" message="tns:requestStringResponse"/>
+</operation>
+<operation name="requestStringArray">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestStringArrayRequest" message="tns:requestStringArray"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestStringArrayResponse" message="tns:requestStringArrayResponse"/>
+</operation>
+<operation name="requestCharacter">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestCharacterRequest" message="tns:requestCharacter"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapCharacterService/requestCharacterResponse" message="tns:requestCharacterResponse"/>
+</operation>
+</portType>
+<binding name="SoapCharacterServicePortBinding" type="tns:SoapCharacterService">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="submitCharacterCharArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitCharacterString">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitCharacterStringArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitString">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitStringArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestString">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestStringArray">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="CharacterService">
+<port name="SoapCharacterServicePort" binding="tns:SoapCharacterServicePortBinding">
+<soap:address location="http://36.50.135.242:2221/CharacterService"/>
+</port>
+</service>
+<message name="requestListProject">
+<part name="parameters" element="tns:requestListProject"/>
+</message>
+<message name="requestListProjectResponse">
+<part name="parameters" element="tns:requestListProjectResponse"/>
+</message>
+<message name="submitProductY">
+<part name="parameters" element="tns:submitProductY"/>
+</message>
+<message name="submitProductYResponse">
+<part name="parameters" element="tns:submitProductYResponse"/>
+</message>
+<message name="submitEmployee">
+<part name="parameters" element="tns:submitEmployee"/>
+</message>
+<message name="submitEmployeeResponse">
+<part name="parameters" element="tns:submitEmployeeResponse"/>
+</message>
+<message name="requestListStudent">
+<part name="parameters" element="tns:requestListStudent"/>
+</message>
+<message name="requestListStudentResponse">
+<part name="parameters" element="tns:requestListStudentResponse"/>
+</message>
+<message name="submitListStudent">
+<part name="parameters" element="tns:submitListStudent"/>
+</message>
+<message name="submitListStudentResponse">
+<part name="parameters" element="tns:submitListStudentResponse"/>
+</message>
+<message name="requestListOrder">
+<part name="parameters" element="tns:requestListOrder"/>
+</message>
+<message name="requestListOrderResponse">
+<part name="parameters" element="tns:requestListOrderResponse"/>
+</message>
+<message name="submitListOrder">
+<part name="parameters" element="tns:submitListOrder"/>
+</message>
+<message name="submitListOrderResponse">
+<part name="parameters" element="tns:submitListOrderResponse"/>
+</message>
+<message name="requestListOrderY">
+<part name="parameters" element="tns:requestListOrderY"/>
+</message>
+<message name="requestListOrderYResponse">
+<part name="parameters" element="tns:requestListOrderYResponse"/>
+</message>
+<message name="submitListOrderY">
+<part name="parameters" element="tns:submitListOrderY"/>
+</message>
+<message name="submitListOrderYResponse">
+<part name="parameters" element="tns:submitListOrderYResponse"/>
+</message>
+<message name="requestListEmployeeY">
+<part name="parameters" element="tns:requestListEmployeeY"/>
+</message>
+<message name="requestListEmployeeYResponse">
+<part name="parameters" element="tns:requestListEmployeeYResponse"/>
+</message>
+<message name="submitListEmployeeY">
+<part name="parameters" element="tns:submitListEmployeeY"/>
+</message>
+<message name="submitListEmployeeYResponse">
+<part name="parameters" element="tns:submitListEmployeeYResponse"/>
+</message>
+<message name="requestListStudentY">
+<part name="parameters" element="tns:requestListStudentY"/>
+</message>
+<message name="requestListStudentYResponse">
+<part name="parameters" element="tns:requestListStudentYResponse"/>
+</message>
+<message name="requestListCustomer">
+<part name="parameters" element="tns:requestListCustomer"/>
+</message>
+<message name="requestListCustomerResponse">
+<part name="parameters" element="tns:requestListCustomerResponse"/>
+</message>
+<message name="requestListCustomerY">
+<part name="parameters" element="tns:requestListCustomerY"/>
+</message>
+<message name="requestListCustomerYResponse">
+<part name="parameters" element="tns:requestListCustomerYResponse"/>
+</message>
+<message name="submitListCustomerY">
+<part name="parameters" element="tns:submitListCustomerY"/>
+</message>
+<message name="submitListCustomerYResponse">
+<part name="parameters" element="tns:submitListCustomerYResponse"/>
+</message>
+<message name="submitListProject">
+<part name="parameters" element="tns:submitListProject"/>
+</message>
+<message name="submitListProjectResponse">
+<part name="parameters" element="tns:submitListProjectResponse"/>
+</message>
+<message name="submitListCustomer">
+<part name="parameters" element="tns:submitListCustomer"/>
+</message>
+<message name="submitListCustomerResponse">
+<part name="parameters" element="tns:submitListCustomerResponse"/>
+</message>
+<message name="requestProductY">
+<part name="parameters" element="tns:requestProductY"/>
+</message>
+<message name="requestProductYResponse">
+<part name="parameters" element="tns:requestProductYResponse"/>
+</message>
+<message name="requestEmployee">
+<part name="parameters" element="tns:requestEmployee"/>
+</message>
+<message name="requestEmployeeResponse">
+<part name="parameters" element="tns:requestEmployeeResponse"/>
+</message>
+<message name="submitListStudentY">
+<part name="parameters" element="tns:submitListStudentY"/>
+</message>
+<message name="submitListStudentYResponse">
+<part name="parameters" element="tns:submitListStudentYResponse"/>
+</message>
+<portType name="SoapObjectService">
+<operation name="requestListProject">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListProjectRequest" message="tns:requestListProject"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListProjectResponse" message="tns:requestListProjectResponse"/>
+</operation>
+<operation name="submitProductY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitProductYRequest" message="tns:submitProductY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitProductYResponse" message="tns:submitProductYResponse"/>
+</operation>
+<operation name="submitEmployee">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitEmployeeRequest" message="tns:submitEmployee"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitEmployeeResponse" message="tns:submitEmployeeResponse"/>
+</operation>
+<operation name="requestListStudent">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListStudentRequest" message="tns:requestListStudent"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListStudentResponse" message="tns:requestListStudentResponse"/>
+</operation>
+<operation name="submitListStudent">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListStudentRequest" message="tns:submitListStudent"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListStudentResponse" message="tns:submitListStudentResponse"/>
+</operation>
+<operation name="requestListOrder">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListOrderRequest" message="tns:requestListOrder"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListOrderResponse" message="tns:requestListOrderResponse"/>
+</operation>
+<operation name="submitListOrder">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListOrderRequest" message="tns:submitListOrder"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListOrderResponse" message="tns:submitListOrderResponse"/>
+</operation>
+<operation name="requestListOrderY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListOrderYRequest" message="tns:requestListOrderY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListOrderYResponse" message="tns:requestListOrderYResponse"/>
+</operation>
+<operation name="submitListOrderY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListOrderYRequest" message="tns:submitListOrderY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListOrderYResponse" message="tns:submitListOrderYResponse"/>
+</operation>
+<operation name="requestListEmployeeY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListEmployeeYRequest" message="tns:requestListEmployeeY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListEmployeeYResponse" message="tns:requestListEmployeeYResponse"/>
+</operation>
+<operation name="submitListEmployeeY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListEmployeeYRequest" message="tns:submitListEmployeeY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListEmployeeYResponse" message="tns:submitListEmployeeYResponse"/>
+</operation>
+<operation name="requestListStudentY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListStudentYRequest" message="tns:requestListStudentY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListStudentYResponse" message="tns:requestListStudentYResponse"/>
+</operation>
+<operation name="requestListCustomer">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListCustomerRequest" message="tns:requestListCustomer"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListCustomerResponse" message="tns:requestListCustomerResponse"/>
+</operation>
+<operation name="requestListCustomerY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListCustomerYRequest" message="tns:requestListCustomerY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestListCustomerYResponse" message="tns:requestListCustomerYResponse"/>
+</operation>
+<operation name="submitListCustomerY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListCustomerYRequest" message="tns:submitListCustomerY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListCustomerYResponse" message="tns:submitListCustomerYResponse"/>
+</operation>
+<operation name="submitListProject">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListProjectRequest" message="tns:submitListProject"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListProjectResponse" message="tns:submitListProjectResponse"/>
+</operation>
+<operation name="submitListCustomer">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListCustomerRequest" message="tns:submitListCustomer"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListCustomerResponse" message="tns:submitListCustomerResponse"/>
+</operation>
+<operation name="requestProductY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestProductYRequest" message="tns:requestProductY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestProductYResponse" message="tns:requestProductYResponse"/>
+</operation>
+<operation name="requestEmployee">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestEmployeeRequest" message="tns:requestEmployee"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/requestEmployeeResponse" message="tns:requestEmployeeResponse"/>
+</operation>
+<operation name="submitListStudentY">
+<input wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListStudentYRequest" message="tns:submitListStudentY"/>
+<output wsam:Action="http://soap.server.network.judge.dblab.ptit/SoapObjectService/submitListStudentYResponse" message="tns:submitListStudentYResponse"/>
+</operation>
+</portType>
+<binding name="SoapObjectServicePortBinding" type="tns:SoapObjectService">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="requestListProject">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitProductY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitEmployee">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListStudent">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListStudent">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListOrder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListOrder">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListOrderY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListOrderY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListEmployeeY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListEmployeeY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListStudentY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListCustomer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestListCustomerY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListCustomerY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListProject">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListCustomer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestProductY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="requestEmployee">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="submitListStudentY">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="ObjectService">
+<port name="SoapObjectServicePort" binding="tns:SoapObjectServicePortBinding">
+<soap:address location="http://36.50.135.242:2221/ObjectService"/>
+</port>
+</service>
+</definitions>

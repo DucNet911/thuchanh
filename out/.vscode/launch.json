@@ -1,0 +1,83 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LargestNumber",
+            "request": "launch",
+            "mainClass": "WS.LargestNumber",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        },
+        {
+            "type": "java",
+            "name": "SumArray",
+            "request": "launch",
+            "mainClass": "WS.SumArray",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        },
+        {
+            "type": "java",
+            "name": "RotateCharacters",
+            "request": "launch",
+            "mainClass": "WS.RotateCharacters",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        },
+        {
+            "type": "java",
+            "name": "GroupByVowelCount",
+            "request": "launch",
+            "mainClass": "WS.GroupByVowelCount",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        },
+        {
+            "type": "java",
+            "name": "SortEmployeesBySeniority",
+            "request": "launch",
+            "mainClass": "WS.SortEmployeesBySeniority",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        },
+        {
+            "type": "java",
+            "name": "FilterPotentialCustomers",
+            "request": "launch",
+            "mainClass": "WS.FilterPotentialCustomers",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}/out",
+                "${workspaceFolder}/lib/*"
+            ],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build WS"
+        }
+    ]
+}
